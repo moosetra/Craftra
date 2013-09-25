@@ -2,16 +2,20 @@ package com.moosetra.craftra;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.common.MinecraftForge;
 
-import com.moosetra.craftra.block.TarmacBlock;
 import com.moosetra.craftra.block.TarBlock;
+import com.moosetra.craftra.block.TarmacBlock;
+import com.moosetra.craftra.item.LighterItem;
+import com.moosetra.craftra.item.TarPileItem;
 import com.moosetra.craftra.lib.Reference;
 import com.moosetra.craftra.proxy.CommonProxy;
+import com.moosetra.craftra.lib.Strings;
+import com.moosetra.craftra.lib.ItemIds;
+import com.moosetra.craftra.lib.BlockIds;
+
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -29,9 +33,13 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 
 public class Craftra {
-	
+  // Blocks
 	public final static Block TarmacBlock = new TarmacBlock(500, Material.rock); 
 	public final static Block TarBlock = new TarBlock(501, Material.ground);
+	
+  // Items
+	public final static Item TarPileItem = new TarPileItem(5000);
+	public final static Item LighterItem = new LighterItem(5001);
 	
     	@Instance("craftra")
     	public static Craftra instance;
@@ -50,8 +58,13 @@ public class Craftra {
     			proxy.registerRenderers();
               // Item Stacks  
                 ItemStack gravelStack = new ItemStack(Block.gravel);
+                ItemStack tarpileStack = new ItemStack();
+                ItemStack tarStack = new ItemStack();
+                ItemStack lighterStack = new ItemStack();
+                ItemStack flintandsteelStack = new ItemStack(Item.flintAndSteel);
+                ItemStack ironingotStack = new ItemStack(Item.ingotIron);
                 
-              // Item Lang & Harvest Leves
+              // Block Lang & Harvest Levels
     			GameRegistry.registerBlock(TarmacBlock, "TarmacBlock");
     			LanguageRegistry.addName(TarmacBlock, "Tarmac");
     			MinecraftForge.setBlockHarvestLevel(TarmacBlock, "Pickaxe", 2);
@@ -59,8 +72,20 @@ public class Craftra {
     			GameRegistry.registerBlock(TarBlock, "TarBlock");
     			LanguageRegistry.addName(TarBlock, "Tar");
     			MinecraftForge.setBlockHarvestLevel(TarBlock, "Shovel", 0);
-    		  // Recipes
     			
+    		  // Item Lang
+    			GameRegistry.registerItem(TarPileItem, "TarPileItem");
+    			LanguageRegistry.addName(TarPileItem, "Tar Pile");
+    			
+    			GameRegistry.registerItem(LighterItem, "LighterItem");
+    			LanguageRegistry.addName(LighterItem, "Lighter");
+    			
+    		  // Recipes
+    			GameRegistry.addRecipe(tarStack, "xxx", "xxx", "xxx",
+    					'x', tarpileStack);
+    			
+    			GameRegistry.addRecipe(lighterStack, "xxx", "xyx", "xxx",
+    					'x', ironingotStack, 'y', flintandsteelStack);
     			
           //ItemStack stackname = new ItemStack(block./item., amount, metadata), 
           //FurnaceRecipies.smelting().addSmelting(blockID, metadata, outputitemstack, xp); 
