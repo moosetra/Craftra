@@ -6,8 +6,10 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraftforge.common.MinecraftForge;
 
 import com.moosetra.craftra.block.TarmacBlock;
+import com.moosetra.craftra.block.TarBlock;
 import com.moosetra.craftra.lib.Reference;
 import com.moosetra.craftra.proxy.CommonProxy;
 
@@ -28,7 +30,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class Craftra {
 	
-	public final static Block TarmacBlock = new TarmacBlock(500, Material.rock).setHardness(1.5f).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("TarmacBlock").setCreativeTab(CreativeTabs.tabBlock); 
+	public final static Block TarmacBlock = new TarmacBlock(500, Material.rock); 
+	public final static Block TarBlock = new TarBlock(501, Material.ground);
 	
     	@Instance("craftra")
     	public static Craftra instance;
@@ -45,9 +48,19 @@ public class Craftra {
     	@EventHandler
     	public void load(FMLInitializationEvent event) {
     			proxy.registerRenderers();
-                        
+              // Item Stacks  
+                ItemStack gravelStack = new ItemStack(Block.gravel);
+                
+              // Item Lang & Harvest Leves
     			GameRegistry.registerBlock(TarmacBlock, "TarmacBlock");
     			LanguageRegistry.addName(TarmacBlock, "Tarmac");
+    			MinecraftForge.setBlockHarvestLevel(TarmacBlock, "Pickaxe", 2);
+    			
+    			GameRegistry.registerBlock(TarBlock, "TarBlock");
+    			LanguageRegistry.addName(TarBlock, "Tar");
+    			MinecraftForge.setBlockHarvestLevel(TarBlock, "Shovel", 0);
+    		  // Recipes
+    			
     			
           //ItemStack stackname = new ItemStack(block./item., amount, metadata), 
           //FurnaceRecipies.smelting().addSmelting(blockID, metadata, outputitemstack, xp); 
