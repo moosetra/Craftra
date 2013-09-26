@@ -12,10 +12,6 @@ import com.moosetra.craftra.item.LighterItem;
 import com.moosetra.craftra.item.TarPileItem;
 import com.moosetra.craftra.lib.Reference;
 import com.moosetra.craftra.proxy.CommonProxy;
-import com.moosetra.craftra.lib.Strings;
-import com.moosetra.craftra.lib.ItemIds;
-import com.moosetra.craftra.lib.BlockIds;
-
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;

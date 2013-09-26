@@ -6,7 +6,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import com.moosetra.craftra.lib.Strings;
 import com.moosetra.craftra.Craftra;
 
 
@@ -17,7 +16,6 @@ public class LighterItem extends Item {
 	public LighterItem(int id) {
 		super(id);
 		
-		this.setUnlocalizedName(Strings.RESOURCE_PREFIX + Strings.LighterItem_NAME);
 		setMaxStackSize(1);
 		setCreativeTab(CreativeTabs.tabTools);
 		setUnlocalizedName("LighterItem");
