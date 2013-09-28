@@ -13,7 +13,7 @@ public class TarPileItem extends Item {
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMisc);
 		setUnlocalizedName("TarPileItem");
-		func_111206_d(Reference.MOD_NAME.toLowerCase() + ":TarPile");
+		/* func_111206_d(Reference.MOD_NAME.toLowerCase() + ":TarPile"); */
 		
 	}
 

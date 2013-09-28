@@ -23,8 +23,8 @@ public class TarBlock extends Block {
 		
 	}
 	
-	public int idDropped(int metadata, Random random, int fortune) {
-		return 
+	/* public int idDropped(int metadata, Random random, int fortune) {
+		// return 
 
-	}		
+	} */		
 }

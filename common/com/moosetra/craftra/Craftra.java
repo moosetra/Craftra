@@ -53,12 +53,12 @@ public class Craftra {
     	public void load(FMLInitializationEvent event) {
     			proxy.registerRenderers();
               // Item Stacks  
-                ItemStack gravelStack = new ItemStack(Block.gravel);
+             /* ItemStack gravelStack = new ItemStack(Block.gravel);
                 ItemStack tarpileStack = new ItemStack();
                 ItemStack tarStack = new ItemStack();
-                ItemStack lighterStack = new ItemStack();
+                ItemStack lighterStack = new ItemStack(); 
                 ItemStack flintandsteelStack = new ItemStack(Item.flintAndSteel);
-                ItemStack ironingotStack = new ItemStack(Item.ingotIron);
+                ItemStack ironingotStack = new ItemStack(Item.ingotIron); */
                 
               // Block Lang & Harvest Levels
     			GameRegistry.registerBlock(TarmacBlock, "TarmacBlock");
@@ -77,11 +77,11 @@ public class Craftra {
     			LanguageRegistry.addName(LighterItem, "Lighter");
     			
     		  // Recipes
-    			GameRegistry.addRecipe(tarStack, "xxx", "xxx", "xxx",
+    		 /* GameRegistry.addRecipe(tarStack, "xxx", "xxx", "xxx",
     					'x', tarpileStack);
     			
     			GameRegistry.addRecipe(lighterStack, "xxx", "xyx", "xxx",
-    					'x', ironingotStack, 'y', flintandsteelStack);
+    					'x', ironingotStack, 'y', flintandsteelStack); */
     			
           //ItemStack stackname = new ItemStack(block./item., amount, metadata), 
           //FurnaceRecipies.smelting().addSmelting(blockID, metadata, outputitemstack, xp); 
