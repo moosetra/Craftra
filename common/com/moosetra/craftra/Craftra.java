@@ -12,6 +12,7 @@ import com.moosetra.craftra.item.LighterItem;
 import com.moosetra.craftra.item.TarPileItem;
 import com.moosetra.craftra.lib.Reference;
 import com.moosetra.craftra.proxy.CommonProxy;
+import com.moosetra.craftra.block.CarboniteOre;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -32,6 +33,7 @@ public class Craftra {
   // Blocks
 	public final static Block TarmacBlock = new TarmacBlock(500, Material.rock); 
 	public final static Block TarBlock = new TarBlock(501, Material.ground);
+	public final static Block GenericBlock = new CarboniteOre(502, Material.rock);
 	
   // Items
 	public final static Item TarPileItem = new TarPileItem(5000);
