@@ -87,6 +87,9 @@ public class Craftra {
     			GameRegistry.registerItem(LighterItem, "LighterItem");
     			LanguageRegistry.addName(LighterItem, "Lighter");
     			
+    			GameRegistry.registerItem(CarboniteItem, "CarboniteItem");
+    			LanguageRegistry.addName(CarboniteItem, "Carbonite");
+    			
     		  // Recipes
     		    GameRegistry.addRecipe(tarmacStack, "yxy", "xyx", "yxy",
     					'x', tarpileStack,'y', gravelStack);
@@ -94,7 +97,7 @@ public class Craftra {
     			GameRegistry.addRecipe(lighterStack, "xxx", "xyx", "xxx",
     					'x', ironingotStack, 'y', flintandsteelStack); 
     			
-    		  //FurnaceRecipies.smelting().addSmelting(carboniteoreStack, 0, carboniteStack, 0.2F);
+    			GameRegistry.addSmelting(501, carboniteStack, 0);
     			
     			
              

@@ -12,6 +12,7 @@ import net.minecraft.item.Item;
 
 import com.moosetra.craftra.item.TarPileItem;
 import com.moosetra.craftra.Craftra;
+import com.moosetra.craftra.lib.Reference;
 
 
 public class TarBlock extends Block {
