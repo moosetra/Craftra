@@ -57,17 +57,8 @@ public class Craftra {
     	@EventHandler
     	public void load(FMLInitializationEvent event) {
     			proxy.registerRenderers();
-             // Item Stacks  
-                ItemStack gravelStack = new ItemStack(Block.gravel);
-                ItemStack tarpileStack = new ItemStack(TarPileItem);
-                ItemStack tarmacStack = new ItemStack(TarmacBlock);
-                ItemStack lighterStack = new ItemStack(LighterItem); 
-                ItemStack flintandsteelStack = new ItemStack(Item.flintAndSteel);
-                ItemStack ironingotStack = new ItemStack(Item.ingotIron);
-                ItemStack carboniteStack = new ItemStack(CarboniteItem);
-                ItemStack carboniteoreStack = new ItemStack(CarboniteOreBlock);
-                
-              // Block Lang & Harvest Levels
+             
+    			// Block Lang & Harvest Levels
     			GameRegistry.registerBlock(TarmacBlock, "TarmacBlock");
     			LanguageRegistry.addName(TarmacBlock, "Tarmac");
     			MinecraftForge.setBlockHarvestLevel(TarmacBlock, "Pickaxe", 2);
@@ -89,6 +80,15 @@ public class Craftra {
     			
     			GameRegistry.registerItem(CarboniteItem, "CarboniteItem");
     			LanguageRegistry.addName(CarboniteItem, "Carbonite");
+    			
+    			// Item Stacks  
+                ItemStack gravelStack = new ItemStack(Block.gravel);
+                ItemStack tarpileStack = new ItemStack(TarPileItem);
+                ItemStack tarmacStack = new ItemStack(TarmacBlock);
+                ItemStack lighterStack = new ItemStack(LighterItem); 
+                ItemStack flintandsteelStack = new ItemStack(Item.flintAndSteel);
+                ItemStack ironingotStack = new ItemStack(Item.ingotIron);
+                ItemStack carboniteStack = new ItemStack(CarboniteItem);
     			
     		  // Recipes
     		    GameRegistry.addRecipe(tarmacStack, "yxy", "xyx", "yxy",
