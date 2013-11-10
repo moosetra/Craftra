@@ -12,7 +12,7 @@ import com.moosetra.craftra.item.LighterItem;
 import com.moosetra.craftra.item.TarPileItem;
 import com.moosetra.craftra.lib.Reference;
 import com.moosetra.craftra.proxy.CommonProxy;
-import com.moosetra.craftra.block.CarboniteOre;
+import com.moosetra.craftra.block.CarboniteOreBlock;
 import com.moosetra.craftra.item.CarboniteItem;
 
 import cpw.mods.fml.common.Mod;
@@ -34,7 +34,8 @@ public class Craftra {
   
 	// Blocks
 	public final static Block TarmacBlock = new TarmacBlock(500, Material.rock); 
-	public final static Block CarboniteOreBlock = new CarboniteOre(501);
+	public final static Block CarboniteOreBlock = new CarboniteOreBlock(501, Material.rock);
+	public final static Block TarBlock = new TarBlock(502, Material.rock);
 	
 	// Items
 	public final static Item TarPileItem = new TarPileItem(5000);
@@ -71,9 +72,13 @@ public class Craftra {
     			LanguageRegistry.addName(TarmacBlock, "Tarmac");
     			MinecraftForge.setBlockHarvestLevel(TarmacBlock, "Pickaxe", 2);
     			
+    			GameRegistry.registerBlock(CarboniteOreBlock, "CarboniteOreBlock");
+    			LanguageRegistry.addName(CarboniteOreBlock, "Carbonite Ore");
+    			MinecraftForge.setBlockHarvestLevel(CarboniteOreBlock, "Pickaxe", 2);
+    			
     			GameRegistry.registerBlock(TarBlock, "TarBlock");
     			LanguageRegistry.addName(TarBlock, "Tar");
-    			MinecraftForge.setBlockHarvestLevel(TarBlock, "Shovel", 0);
+    			MinecraftForge.setBlockHarvestLevel(TarBlock, "Pickaxe", 0);
     			
     		  // Item Lang
     			GameRegistry.registerItem(TarPileItem, "TarPileItem");

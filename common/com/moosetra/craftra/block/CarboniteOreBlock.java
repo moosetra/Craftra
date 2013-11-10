@@ -9,10 +9,10 @@ import net.minecraft.creativetab.CreativeTabs;
 
 import com.moosetra.craftra.lib.Reference;
 
-public class CarboniteOre extends BlockOre {
+public class CarboniteOreBlock extends Block {
 
-	public CarboniteOre(int par1) {
-		super(par1);
+	public CarboniteOreBlock(int ID, Material material) {
+		super(ID, material);
 		
 		setHardness(2.0f);
 		setStepSound(Block.soundStoneFootstep);
