@@ -3,25 +3,23 @@ package com.moosetra.craftra.block;
 import java.util.Random;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockOre;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
 import com.moosetra.craftra.lib.Reference;
 
-public class CarboniteOre extends Block {
+public class CarboniteOre extends BlockOre {
 
-	public CarboniteOre(int id, Material material) {
-		super(id, material);
+	public CarboniteOre(int par1) {
+		super(par1);
 		
-		setHardness(1.5f);
+		setHardness(2.0f);
 		setStepSound(Block.soundStoneFootstep);
-		setUnlocalizedName("GenericOre");
+		setUnlocalizedName("CarboniteOre");
 		setCreativeTab(CreativeTabs.tabBlock);
 				
 	}
 	
-	public int idDropped(int metadata, Random random,int fortune) {
-		return Block.CarboniteOre.itemID;
-	}
-	
+		
 }

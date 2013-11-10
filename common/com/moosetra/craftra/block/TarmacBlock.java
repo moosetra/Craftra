@@ -16,6 +16,7 @@ public class TarmacBlock extends Block {
 		setStepSound(Block.soundStoneFootstep);
 		setUnlocalizedName("TarmacBlock");
 		setCreativeTab(CreativeTabs.tabBlock);
+		setTextureName(Reference.MOD_NAME.toLowerCase() + ":Tarmac");
 		
 	}
 	

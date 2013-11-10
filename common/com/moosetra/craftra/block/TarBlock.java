@@ -6,8 +6,13 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
+
+
+import net.minecraft.item.Item;
+
 import com.moosetra.craftra.item.TarPileItem;
 import com.moosetra.craftra.Craftra;
+
 
 public class TarBlock extends Block {
 	
@@ -23,8 +28,6 @@ public class TarBlock extends Block {
 		
 	}
 	
-	/* public int idDropped(int metadata, Random random, int fortune) {
-		// return 
+}	
+ 		
 
-	} */		
-}

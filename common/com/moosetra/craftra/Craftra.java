@@ -13,6 +13,7 @@ import com.moosetra.craftra.item.TarPileItem;
 import com.moosetra.craftra.lib.Reference;
 import com.moosetra.craftra.proxy.CommonProxy;
 import com.moosetra.craftra.block.CarboniteOre;
+import com.moosetra.craftra.item.CarboniteItem;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -30,14 +31,15 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 
 public class Craftra {
-  // Blocks
+  
+	// Blocks
 	public final static Block TarmacBlock = new TarmacBlock(500, Material.rock); 
-	public final static Block TarBlock = new TarBlock(501, Material.ground);
-	public final static Block GenericBlock = new CarboniteOre(502, Material.rock);
+	public final static Block CarboniteOreBlock = new CarboniteOre(501);
 	
-  // Items
+	// Items
 	public final static Item TarPileItem = new TarPileItem(5000);
 	public final static Item LighterItem = new LighterItem(5001);
+	public final static Item CarboniteItem = new CarboniteItem(5002);
 	
     	@Instance("craftra")
     	public static Craftra instance;
@@ -54,13 +56,15 @@ public class Craftra {
     	@EventHandler
     	public void load(FMLInitializationEvent event) {
     			proxy.registerRenderers();
-              // Item Stacks  
-              /* ItemStack gravelStack = new ItemStack(Block.gravel);
-                ItemStack tarpileStack = new ItemStack();
-                ItemStack tarStack = new ItemStack();
-                ItemStack lighterStack = new ItemStack(); 
+             // Item Stacks  
+                ItemStack gravelStack = new ItemStack(Block.gravel);
+                ItemStack tarpileStack = new ItemStack(TarPileItem);
+                ItemStack tarmacStack = new ItemStack(TarmacBlock);
+                ItemStack lighterStack = new ItemStack(LighterItem); 
                 ItemStack flintandsteelStack = new ItemStack(Item.flintAndSteel);
-                ItemStack ironingotStack = new ItemStack(Item.ingotIron); */
+                ItemStack ironingotStack = new ItemStack(Item.ingotIron);
+                ItemStack carboniteStack = new ItemStack(CarboniteItem);
+                ItemStack carboniteoreStack = new ItemStack(CarboniteOreBlock);
                 
               // Block Lang & Harvest Levels
     			GameRegistry.registerBlock(TarmacBlock, "TarmacBlock");
@@ -79,18 +83,15 @@ public class Craftra {
     			LanguageRegistry.addName(LighterItem, "Lighter");
     			
     		  // Recipes
-    		 /* GameRegistry.addRecipe(tarStack, "xxx", "xxx", "xxx",
-    					'x', tarpileStack);
+    		    GameRegistry.addRecipe(tarmacStack, "yxy", "xyx", "yxy",
+    					'x', tarpileStack,'y', gravelStack);
     			
     			GameRegistry.addRecipe(lighterStack, "xxx", "xyx", "xxx",
-    					'x', ironingotStack, 'y', flintandsteelStack); */
+    					'x', ironingotStack, 'y', flintandsteelStack); 
     			
-          //ItemStack stackname = new ItemStack(block./item., amount, metadata), 
-          //FurnaceRecipies.smelting().addSmelting(blockID, metadata, outputitemstack, xp); 
-          //GameRegistry.addSmelting(input, output, xp);
-          //GameRegistry.addShapelessRecipe(Result, Required item, Diff Required Item);
-          //GameRegistry.addRecipe(gravelStack , Top"xyx", Mid"y y", Bottom"xyx", 
-          //		   'x', Define Variable, 'y', Define Variable);
+    		  //FurnaceRecipies.smelting().addSmelting(carboniteoreStack, 0, carboniteStack, 0.2F);
+    			
+    			
              
     	}
    
