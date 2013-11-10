@@ -12,7 +12,7 @@ public class TarmacBlock extends Block {
 	public TarmacBlock(int id, Material material) {
 		super(id, material);
 		
-		setHardness(1.5f);
+		setHardness(5f);
 		setStepSound(Block.soundStoneFootstep);
 		setUnlocalizedName("TarmacBlock");
 		setCreativeTab(CreativeTabs.tabBlock);

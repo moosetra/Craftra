@@ -35,7 +35,7 @@ public class Craftra {
 	// Blocks
 	public final static Block TarmacBlock = new TarmacBlock(500, Material.rock); 
 	public final static Block CarboniteOreBlock = new CarboniteOreBlock(501, Material.rock);
-	public final static Block TarBlock = new TarBlock(502, Material.rock);
+	public final static Block TarBlock = new TarBlock(502, Material.ground);
 	
 	// Items
 	public final static Item TarPileItem = new TarPileItem(5000);
@@ -61,15 +61,15 @@ public class Craftra {
     			// Block Lang & Harvest Levels
     			GameRegistry.registerBlock(TarmacBlock, "TarmacBlock");
     			LanguageRegistry.addName(TarmacBlock, "Tarmac");
-    			MinecraftForge.setBlockHarvestLevel(TarmacBlock, "Pickaxe", 2);
+    			MinecraftForge.setBlockHarvestLevel(TarmacBlock, "pickaxe", 2);
     			
     			GameRegistry.registerBlock(CarboniteOreBlock, "CarboniteOreBlock");
     			LanguageRegistry.addName(CarboniteOreBlock, "Carbonite Ore");
-    			MinecraftForge.setBlockHarvestLevel(CarboniteOreBlock, "Pickaxe", 2);
+    			MinecraftForge.setBlockHarvestLevel(CarboniteOreBlock, "pickaxe", 1);
     			
     			GameRegistry.registerBlock(TarBlock, "TarBlock");
     			LanguageRegistry.addName(TarBlock, "Tar");
-    			MinecraftForge.setBlockHarvestLevel(TarBlock, "Pickaxe", 0);
+    			MinecraftForge.setBlockHarvestLevel(TarBlock, "shovel", 0);
     			
     		  // Item Lang
     			GameRegistry.registerItem(TarPileItem, "TarPileItem");

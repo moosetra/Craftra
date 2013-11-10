@@ -21,7 +21,7 @@ public class TarBlock extends Block {
 	public TarBlock(int id, Material material) {
 		super(id, material);
 		
-		setHardness(0.5f);
+		setHardness(1.0f);
 		setStepSound(Block.soundGravelFootstep);
 		setUnlocalizedName("TarBlock");
 		setCreativeTab(CreativeTabs.tabBlock);

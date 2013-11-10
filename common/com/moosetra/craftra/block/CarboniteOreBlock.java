@@ -15,7 +15,7 @@ public class CarboniteOreBlock extends Block {
 	public CarboniteOreBlock(int ID, Material material) {
 		super(ID, material);
 		
-		setHardness(2.0f);
+		setHardness(3.0f);
 		setStepSound(Block.soundStoneFootstep);
 		setUnlocalizedName("CarboniteOre");
 		setCreativeTab(CreativeTabs.tabBlock);
