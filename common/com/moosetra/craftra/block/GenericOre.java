@@ -1,22 +1,21 @@
 package com.moosetra.craftra.block;
 
-import com.moosetra.craftra.lib.Reference;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
+import com.moosetra.craftra.lib.Reference;
 
-public class TarmacBlock extends Block {
+public class GenericOre extends Block {
 
-	public TarmacBlock(int id, Material material) {
+	public GenericOre(int id, Material material) {
 		super(id, material);
 		
 		setHardness(1.5f);
 		setStepSound(Block.soundStoneFootstep);
-		setUnlocalizedName("TarmacBlock");
+		setUnlocalizedName("GenericOre");
 		setCreativeTab(CreativeTabs.tabBlock);
-		
+				
 	}
 	
 }

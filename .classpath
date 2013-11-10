@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="common"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Development/forge/mcp/jars/libraries/org/lwjgl/lwjgl/lwjgl-platform/2.9.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/Minecraft">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Development/forge/mcp/jars/libraries/org/lwjgl/lwjgl/lwjgl-platform/2.9.0"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="eclipse"/>
+</classpath>

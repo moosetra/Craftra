@@ -53,7 +53,7 @@ public class Craftra {
     	public void load(FMLInitializationEvent event) {
     			proxy.registerRenderers();
               // Item Stacks  
-             /* ItemStack gravelStack = new ItemStack(Block.gravel);
+              /* ItemStack gravelStack = new ItemStack(Block.gravel);
                 ItemStack tarpileStack = new ItemStack();
                 ItemStack tarStack = new ItemStack();
                 ItemStack lighterStack = new ItemStack(); 
