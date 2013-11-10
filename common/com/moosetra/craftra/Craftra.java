@@ -8,11 +8,12 @@ import net.minecraftforge.common.MinecraftForge;
 
 import com.moosetra.craftra.block.TarBlock;
 import com.moosetra.craftra.block.TarmacBlock;
-import com.moosetra.craftra.item.LighterItem;
+import com.moosetra.craftra.item.CarboniteLighter;
 import com.moosetra.craftra.item.TarPileItem;
 import com.moosetra.craftra.lib.Reference;
 import com.moosetra.craftra.proxy.CommonProxy;
 import com.moosetra.craftra.block.CarboniteOreBlock;
+import com.moosetra.craftra.event.EventManager;
 import com.moosetra.craftra.item.CarboniteIngot;
 
 import cpw.mods.fml.common.Mod;
@@ -32,15 +33,17 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class Craftra {
   
-	// Blocks
+  // Blocks
 	public final static Block TarmacBlock = new TarmacBlock(500, Material.rock); 
 	public final static Block CarboniteOreBlock = new CarboniteOreBlock(501, Material.rock);
 	public final static Block TarBlock = new TarBlock(502, Material.ground);
 	
-	// Items
+  // Items
 	public final static Item TarPileItem = new TarPileItem(5000);
-	public final static Item LighterItem = new LighterItem(5001);
+	public final static Item CarboniteLighter = new CarboniteLighter(5001);
 	public final static Item CarboniteIngot = new CarboniteIngot(5002);
+	
+	EventManager oreManager = new EventManager();
 	
     	@Instance("craftra")
     	public static Craftra instance;
@@ -58,7 +61,7 @@ public class Craftra {
     	public void load(FMLInitializationEvent event) {
     			proxy.registerRenderers();
              
-    			// Block Lang & Harvest Levels
+    		  // Block Lang & Harvest Levels
     			GameRegistry.registerBlock(TarmacBlock, "TarmacBlock");
     			LanguageRegistry.addName(TarmacBlock, "Tarmac");
     			MinecraftForge.setBlockHarvestLevel(TarmacBlock, "pickaxe", 2);
@@ -75,17 +78,20 @@ public class Craftra {
     			GameRegistry.registerItem(TarPileItem, "TarPileItem");
     			LanguageRegistry.addName(TarPileItem, "Tar Pile");
     			
-    			GameRegistry.registerItem(LighterItem, "LighterItem");
-    			LanguageRegistry.addName(LighterItem, "Lighter");
+    			GameRegistry.registerItem(CarboniteLighter, "CarboniteLighter");
+    			LanguageRegistry.addName(CarboniteLighter, "Carbonite Lighter");
     			
     			GameRegistry.registerItem(CarboniteIngot, "CarboniteIngot");
     			LanguageRegistry.addName(CarboniteIngot, "Carbonite Ingot");
+    		  
+    		  // World Gen
+    			GameRegistry.registerWorldGenerator(oreManager);
     			
-    			// Item Stacks  
+    		  // Item Stacks  
                 ItemStack gravelStack = new ItemStack(Block.gravel);
                 ItemStack tarpileStack = new ItemStack(TarPileItem);
                 ItemStack tarmacStack = new ItemStack(TarmacBlock);
-                ItemStack lighterStack = new ItemStack(LighterItem); 
+                ItemStack carbonitelighterStack = new ItemStack(CarboniteLighter); 
                 ItemStack flintandsteelStack = new ItemStack(Item.flintAndSteel);
                 ItemStack ironingotStack = new ItemStack(Item.ingotIron);
                 ItemStack carboniteingotStack = new ItemStack(CarboniteIngot);
@@ -94,8 +100,8 @@ public class Craftra {
     		    GameRegistry.addRecipe(tarmacStack, "yxy", "xyx", "yxy",
     					'x', tarpileStack,'y', gravelStack);
     			
-    			GameRegistry.addRecipe(lighterStack, "xxx", "xyx", "xxx",
-    					'x', ironingotStack, 'y', flintandsteelStack); 
+    			GameRegistry.addRecipe(carbonitelighterStack, "xxx", "xyx", "xxx",
+    					'x', carboniteingotStack, 'y', flintandsteelStack); 
     			
     			GameRegistry.addSmelting(501, carboniteingotStack, 0);
     			

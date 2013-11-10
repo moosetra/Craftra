@@ -12,17 +12,17 @@ import com.moosetra.craftra.lib.Reference;
 
 
 
-public class LighterItem extends Item {
+public class CarboniteLighter extends Item {
 	
 
-	public LighterItem(int id) {
+	public CarboniteLighter(int id) {
 		super(id);
 		
 		setMaxStackSize(1);
 		setCreativeTab(CreativeTabs.tabTools);
-		setUnlocalizedName("LighterItem");
+		setUnlocalizedName("CarboniteLighter");
 		setMaxDamage(192);
-		setTextureName(Reference.MOD_NAME.toLowerCase() + ":Lighter");
+		setTextureName(Reference.MOD_NAME.toLowerCase() + ":CarboniteLighter");
 		
 	}
 	
