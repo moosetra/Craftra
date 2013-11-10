@@ -25,6 +25,8 @@ public class TarBlock extends Block {
 		setStepSound(Block.soundGravelFootstep);
 		setUnlocalizedName("TarBlock");
 		setCreativeTab(CreativeTabs.tabBlock);
+		setTextureName(Reference.MOD_NAME.toLowerCase() + ":TarBlock");
+		
 	}	
 		public int idDropped(int par1, Random random, int zero) {
 	        return Craftra.TarPileItem.itemID;

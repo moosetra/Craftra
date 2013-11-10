@@ -5,15 +5,15 @@ import com.moosetra.craftra.lib.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class CarboniteItem extends Item {
+public class CarboniteIngot extends Item {
 
-	public CarboniteItem(int id) {
+	public CarboniteIngot(int id) {
 		super(id);
 		
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMisc);
-		setUnlocalizedName("CarboniteItem");
-	    
+		setUnlocalizedName("CarboniteIngot");
+		setTextureName(Reference.MOD_NAME.toLowerCase() + ":CarboniteIngot");
 	}
 
 }

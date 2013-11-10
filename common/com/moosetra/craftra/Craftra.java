@@ -13,7 +13,7 @@ import com.moosetra.craftra.item.TarPileItem;
 import com.moosetra.craftra.lib.Reference;
 import com.moosetra.craftra.proxy.CommonProxy;
 import com.moosetra.craftra.block.CarboniteOreBlock;
-import com.moosetra.craftra.item.CarboniteItem;
+import com.moosetra.craftra.item.CarboniteIngot;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -40,7 +40,7 @@ public class Craftra {
 	// Items
 	public final static Item TarPileItem = new TarPileItem(5000);
 	public final static Item LighterItem = new LighterItem(5001);
-	public final static Item CarboniteItem = new CarboniteItem(5002);
+	public final static Item CarboniteIngot = new CarboniteIngot(5002);
 	
     	@Instance("craftra")
     	public static Craftra instance;
@@ -78,8 +78,8 @@ public class Craftra {
     			GameRegistry.registerItem(LighterItem, "LighterItem");
     			LanguageRegistry.addName(LighterItem, "Lighter");
     			
-    			GameRegistry.registerItem(CarboniteItem, "CarboniteItem");
-    			LanguageRegistry.addName(CarboniteItem, "Carbonite");
+    			GameRegistry.registerItem(CarboniteIngot, "CarboniteIngot");
+    			LanguageRegistry.addName(CarboniteIngot, "Carbonite Ingot");
     			
     			// Item Stacks  
                 ItemStack gravelStack = new ItemStack(Block.gravel);
@@ -88,7 +88,7 @@ public class Craftra {
                 ItemStack lighterStack = new ItemStack(LighterItem); 
                 ItemStack flintandsteelStack = new ItemStack(Item.flintAndSteel);
                 ItemStack ironingotStack = new ItemStack(Item.ingotIron);
-                ItemStack carboniteStack = new ItemStack(CarboniteItem);
+                ItemStack carboniteingotStack = new ItemStack(CarboniteIngot);
     			
     		  // Recipes
     		    GameRegistry.addRecipe(tarmacStack, "yxy", "xyx", "yxy",
@@ -97,7 +97,7 @@ public class Craftra {
     			GameRegistry.addRecipe(lighterStack, "xxx", "xyx", "xxx",
     					'x', ironingotStack, 'y', flintandsteelStack); 
     			
-    			GameRegistry.addSmelting(501, carboniteStack, 0);
+    			GameRegistry.addSmelting(501, carboniteingotStack, 0);
     			
     			
              

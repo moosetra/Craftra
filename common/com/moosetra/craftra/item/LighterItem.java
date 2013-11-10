@@ -6,7 +6,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
 import com.moosetra.craftra.Craftra;
+import com.moosetra.craftra.lib.Reference;
 
 
 
@@ -20,6 +22,7 @@ public class LighterItem extends Item {
 		setCreativeTab(CreativeTabs.tabTools);
 		setUnlocalizedName("LighterItem");
 		setMaxDamage(192);
+		setTextureName(Reference.MOD_NAME.toLowerCase() + ":Lighter");
 		
 	}
 	

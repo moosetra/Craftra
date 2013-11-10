@@ -19,6 +19,7 @@ public class CarboniteOreBlock extends Block {
 		setStepSound(Block.soundStoneFootstep);
 		setUnlocalizedName("CarboniteOre");
 		setCreativeTab(CreativeTabs.tabBlock);
+		setTextureName(Reference.MOD_NAME.toLowerCase() + ":CarboniteOre");
 		
 	}		
 	
