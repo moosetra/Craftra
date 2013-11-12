@@ -34,6 +34,10 @@ public class EventManager implements IWorldGenerator {
 	}
 
 	private void generateNether(World world, Random random, int x, int z) {
+		int Xcoord = x + random.nextInt(16);
+		int Ycoord = 10 + random.nextInt(128);
+		int Zcoord = x + random.nextInt(16);
+		(new WorldGenNetherMineable(Craftra.CarboniteOreBlock.blockID, 3, 1)).generate(world, random, Xcoord, Ycoord, Zcoord);
 		
 	}
 
