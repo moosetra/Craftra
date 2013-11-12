@@ -6,16 +6,17 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 
+import com.moosetra.craftra.block.CarboniteOreBlock;
 import com.moosetra.craftra.block.RedMapleLeafBlock;
 import com.moosetra.craftra.block.TarBlock;
 import com.moosetra.craftra.block.TarmacBlock;
+import com.moosetra.craftra.event.EventManager;
+import com.moosetra.craftra.event.TreeManager;
+import com.moosetra.craftra.item.CarboniteIngot;
 import com.moosetra.craftra.item.CarboniteLighter;
 import com.moosetra.craftra.item.TarPileItem;
 import com.moosetra.craftra.lib.Reference;
 import com.moosetra.craftra.proxy.CommonProxy;
-import com.moosetra.craftra.block.CarboniteOreBlock;
-import com.moosetra.craftra.event.EventManager;
-import com.moosetra.craftra.item.CarboniteIngot;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -46,6 +47,7 @@ public class Craftra {
 	public final static Item CarboniteIngot = new CarboniteIngot(5002);
 	
 	EventManager oreManager = new EventManager();
+	TreeManager treeManager = new TreeManager();
 	
     	@Instance("craftra")
     	public static Craftra instance;
@@ -92,6 +94,7 @@ public class Craftra {
     		  
     		  // World Gen
     			GameRegistry.registerWorldGenerator(oreManager);
+    			GameRegistry.registerWorldGenerator(treeManager);
     			
     		  // Item Stacks  
                 ItemStack gravelStack = new ItemStack(Block.gravel);

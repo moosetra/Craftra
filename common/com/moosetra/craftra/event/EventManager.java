@@ -2,12 +2,13 @@ package com.moosetra.craftra.event;
 
 import java.util.Random;
 
-import com.moosetra.craftra.Craftra;
-
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
+
+import com.moosetra.craftra.Craftra;
+
 import cpw.mods.fml.common.IWorldGenerator;
 
 public class EventManager implements IWorldGenerator {

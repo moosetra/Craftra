@@ -1,10 +1,10 @@
 package com.moosetra.craftra.block;
 
-import com.moosetra.craftra.lib.Reference;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+
+import com.moosetra.craftra.lib.Reference;
 
 public class RedMapleLeafBlock extends Block {
 	
