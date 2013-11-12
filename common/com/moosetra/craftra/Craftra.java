@@ -2,9 +2,11 @@ package com.moosetra.craftra;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.EnumHelper;
 
 import com.moosetra.craftra.block.CarboniteOreBlock;
 import com.moosetra.craftra.block.RedMapleLeafBlock;
@@ -15,6 +17,7 @@ import com.moosetra.craftra.event.TreeManager;
 import com.moosetra.craftra.item.CarboniteIngot;
 import com.moosetra.craftra.item.CarboniteLighter;
 import com.moosetra.craftra.item.TarPileItem;
+import com.moosetra.craftra.item.CarboniteSword;
 import com.moosetra.craftra.lib.Reference;
 import com.moosetra.craftra.proxy.CommonProxy;
 
@@ -34,6 +37,9 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 
 public class Craftra {
+	
+  // Tool Materials
+	public static EnumToolMaterial carbonite = EnumHelper.addToolMaterial("Carbonite", 2, 350, 7.0F, 5, 14);
   
   // Blocks
 	public final static Block TarmacBlock = new TarmacBlock(500, Material.rock); 
@@ -41,9 +47,15 @@ public class Craftra {
 	public final static Block TarBlock = new TarBlock(502, Material.ground);
 	public final static Block RedMapleLeafBLock = new RedMapleLeafBlock(503, Material.leaves);
 	
-  // Items
-	public final static Item TarPileItem = new TarPileItem(5000);
+  // Tools
 	public final static Item CarboniteLighter = new CarboniteLighter(5001);
+	public final static Item CarboniteSword = new CarboniteSword(5003, carbonite);
+	public final static Item CarbonitePickaxe = new Carbonitepickaxe(5004, carbonite);
+	public final static Item CarboniteShovel = new CarboniteShovel(5005, carbonite);
+	public final static Item CarboniteAxe = new CarboniteAxe(5006, carbonite);
+		
+  // Other
+	public final static Item TarPileItem = new TarPileItem(5000);
 	public final static Item CarboniteIngot = new CarboniteIngot(5002);
 	
 	EventManager oreManager = new EventManager();
@@ -91,6 +103,19 @@ public class Craftra {
     			
     			GameRegistry.registerItem(CarboniteIngot, "CarboniteIngot");
     			LanguageRegistry.addName(CarboniteIngot, "Carbonite Ingot");
+    			
+    		  // Tool Lang
+    			GameRegistry.registerItem(CarboniteSword, "CarboniteSword");
+    			LanguageRegistry.addName(CarboniteSword, "Carbonite Sword");
+    			
+    			GameRegistry.registerItem(CarbonitePickaxe, "CarbonitePickaxe");
+    			LanguageRegistry.addName(CarbonitePickaxe, "Carbonite Pickaxe");
+    			
+    			GameRegistry.registerItem(CarboniteAxe, "CarboniteAxe");
+    			LanguageRegistry.addName(CarboniteAxe, "Carbonite Axe");
+    			
+    			GameRegistry.registerItem(CarboniteShovel, "CarboniteShovel");
+    			LanguageRegistry.addName(CarboniteShovel, "Carbonite Shovel");
     		  
     		  // World Gen
     			GameRegistry.registerWorldGenerator(oreManager);
