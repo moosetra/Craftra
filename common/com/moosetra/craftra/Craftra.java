@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 
+import com.moosetra.craftra.block.RedMapleLeafBlock;
 import com.moosetra.craftra.block.TarBlock;
 import com.moosetra.craftra.block.TarmacBlock;
 import com.moosetra.craftra.item.CarboniteLighter;
@@ -37,6 +38,7 @@ public class Craftra {
 	public final static Block TarmacBlock = new TarmacBlock(500, Material.rock); 
 	public final static Block CarboniteOreBlock = new CarboniteOreBlock(501, Material.rock);
 	public final static Block TarBlock = new TarBlock(502, Material.ground);
+	public final static Block RedMapleLeafBLock = new RedMapleLeafBlock(503, Material.leaves);
 	
   // Items
 	public final static Item TarPileItem = new TarPileItem(5000);
@@ -73,6 +75,10 @@ public class Craftra {
     			GameRegistry.registerBlock(TarBlock, "TarBlock");
     			LanguageRegistry.addName(TarBlock, "Tar");
     			MinecraftForge.setBlockHarvestLevel(TarBlock, "shovel", 0);
+    			
+    			GameRegistry.registerBlock(RedMapleLeafBLock, "RedMapleLeafBLock");
+    			LanguageRegistry.addName(RedMapleLeafBLock, "Red Maple Leaf");
+    			MinecraftForge.setBlockHarvestLevel(RedMapleLeafBLock, "axe", 0);
     			
     		  // Item Lang
     			GameRegistry.registerItem(TarPileItem, "TarPileItem");

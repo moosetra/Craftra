@@ -20,6 +20,7 @@ public class CarboniteOreBlock extends Block {
 		setUnlocalizedName("CarboniteOre");
 		setCreativeTab(CreativeTabs.tabBlock);
 		setTextureName(Reference.MOD_NAME.toLowerCase() + ":CarboniteOre");
+		setLightValue(0.5f);
 		
 	}		
 	
