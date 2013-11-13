@@ -129,14 +129,37 @@ public class Craftra {
                 ItemStack flintandsteelStack = new ItemStack(Item.flintAndSteel);
                 ItemStack ironingotStack = new ItemStack(Item.ingotIron);
                 ItemStack carboniteingotStack = new ItemStack(CarboniteIngot);
-    			
-    		  // Recipes
+    			ItemStack stickStack = new ItemStack(Item.stick);
+    			ItemStack carbonitepickaxeStack = new ItemStack(CarbonitePickaxe);
+    			ItemStack carboniteaxeStack = new ItemStack(CarboniteAxe);
+    			ItemStack carboniteshovelStack = new ItemStack(CarboniteShovel);
+    			ItemStack carboniteswordStack = new ItemStack(CarboniteSword);
+    		 
+    					// Block Recipes
     		    GameRegistry.addRecipe(tarmacStack, "yxy", "xyx", "yxy",
     					'x', tarpileStack,'y', gravelStack);
-    			
+    			      
+    		           // Item Recipes
     			GameRegistry.addRecipe(carbonitelighterStack, "xxx", "xyx", "xxx",
     					'x', carboniteingotStack, 'y', flintandsteelStack); 
+    			      
+    			      // Tool Recipes
+    			GameRegistry.addRecipe(carbonitepickaxeStack, "xxx", " y ", " y ",
+    					'x', carboniteingotStack,'y', stickStack);
     			
+    			GameRegistry.addRecipe(carboniteshovelStack, " x ", " y ", " y ",
+    					'x', carboniteingotStack,'y', stickStack);
+    			
+    			GameRegistry.addRecipe(carboniteaxeStack, " xx", " yx", " y ",
+    					'x', carboniteingotStack,'y', stickStack);
+    			
+    			GameRegistry.addRecipe(carboniteaxeStack, "xx ", "xy ", " y ",
+    					'x', carboniteingotStack,'y', stickStack);
+    			
+    			GameRegistry.addRecipe(carboniteswordStack, " x ", " x ", " y ",
+    					'x', carboniteingotStack,'y', stickStack);
+    			
+    			      // Smelting Recipes
     			GameRegistry.addSmelting(501, carboniteingotStack, 0);
     			
     			
