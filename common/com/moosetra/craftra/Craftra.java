@@ -20,6 +20,9 @@ import com.moosetra.craftra.item.TarPileItem;
 import com.moosetra.craftra.item.CarboniteSword;
 import com.moosetra.craftra.lib.Reference;
 import com.moosetra.craftra.proxy.CommonProxy;
+import com.moosetra.craftra.item.CarbonitePickaxe;
+import com.moosetra.craftra.item.CarboniteAxe;
+import com.moosetra.craftra.item.CarboniteShovel;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -50,7 +53,7 @@ public class Craftra {
   // Tools
 	public final static Item CarboniteLighter = new CarboniteLighter(5001);
 	public final static Item CarboniteSword = new CarboniteSword(5003, carbonite);
-	public final static Item CarbonitePickaxe = new Carbonitepickaxe(5004, carbonite);
+	public final static Item CarbonitePickaxe = new CarbonitePickaxe(5004, carbonite);
 	public final static Item CarboniteShovel = new CarboniteShovel(5005, carbonite);
 	public final static Item CarboniteAxe = new CarboniteAxe(5006, carbonite);
 		
