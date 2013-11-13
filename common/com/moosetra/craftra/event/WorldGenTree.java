@@ -22,7 +22,7 @@ private final int metaWood;
 private final int metaLeaves;
 public WorldGenTree(boolean par1)
 {
-         this(par1, 4, 0, 0, false);
+         this(par1, 6, 0, 0, false);
 }
 public WorldGenTree(boolean par1, int par2, int par3, int par4, boolean par5)
 {
@@ -112,7 +112,7 @@ public boolean generate(World par1World, Random par2Random, int par3, int par4, 
                                                                  Block block = Block.blocksList[j3];
                                                                  if (block == null || block.canBeReplacedByLeaves(par1World, j2, j1, l2))
                                                                  {
-                                                                         this.setBlockAndMetadata(par1World, j2, j1, l2, Craftra.RedMapleLeafBLock.blockID, this.metaLeaves);
+                                                                         this.setBlockAndMetadata(par1World, j2, j1, l2, Craftra.RedMapleLeafBlock.blockID, this.metaLeaves);
                                                                  }
                                                          }
                                                  }
@@ -124,7 +124,7 @@ public boolean generate(World par1World, Random par2Random, int par3, int par4, 
                                          Block block = Block.blocksList[k1];
                                          if (k1 == 0 || block == null || block.isLeaves(par1World, par3, par4 + j1, par5))
                                          {
-                                                 this.setBlockAndMetadata(par1World, par3, par4 + j1, par5, Block.wood.blockID, this.metaWood);
+                                                 this.setBlockAndMetadata(par1World, par3, par4 + j1, par5, Craftra.RedMapleWoodBlock.blockID, this.metaWood);
                                          }
                                  }
                                  return true;

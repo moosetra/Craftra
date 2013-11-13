@@ -6,9 +6,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemSword;
 
-public class CarboniteShovel extends ItemSword{
+public class CarboniteShovel extends ItemSpade{
 	
 	public CarboniteShovel(int ID, EnumToolMaterial par2EnumToolMaterial) {
 		super(ID, par2EnumToolMaterial);

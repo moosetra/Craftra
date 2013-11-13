@@ -10,6 +10,7 @@ import net.minecraftforge.common.EnumHelper;
 
 import com.moosetra.craftra.block.CarboniteOreBlock;
 import com.moosetra.craftra.block.RedMapleLeafBlock;
+import com.moosetra.craftra.block.RedMapleWoodBlock;
 import com.moosetra.craftra.block.TarBlock;
 import com.moosetra.craftra.block.TarmacBlock;
 import com.moosetra.craftra.event.EventManager;
@@ -45,21 +46,22 @@ public class Craftra {
 	public static EnumToolMaterial carbonite = EnumHelper.addToolMaterial("Carbonite", 2, 350, 7.0F, 5, 14);
   
   // Blocks
-	public final static Block TarmacBlock = new TarmacBlock(500, Material.rock); 
-	public final static Block CarboniteOreBlock = new CarboniteOreBlock(501, Material.rock);
-	public final static Block TarBlock = new TarBlock(502, Material.ground);
-	public final static Block RedMapleLeafBLock = new RedMapleLeafBlock(503, Material.leaves);
+	public final static Block TarmacBlock = new TarmacBlock(450, Material.rock); 
+	public final static Block CarboniteOreBlock = new CarboniteOreBlock(451, Material.rock);
+	public final static Block TarBlock = new TarBlock(452, Material.ground);
+	public final static Block RedMapleLeafBlock = new RedMapleLeafBlock(453, Material.leaves);
+	public final static Block RedMapleWoodBlock = new RedMapleWoodBlock(454, Material.wood);
 	
   // Tools
 	public final static Item CarboniteLighter = new CarboniteLighter(5001);
-	public final static Item CarboniteSword = new CarboniteSword(5003, carbonite);
-	public final static Item CarbonitePickaxe = new CarbonitePickaxe(5004, carbonite);
-	public final static Item CarboniteShovel = new CarboniteShovel(5005, carbonite);
-	public final static Item CarboniteAxe = new CarboniteAxe(5006, carbonite);
+	public final static Item CarboniteSword = new CarboniteSword(4503, carbonite);
+	public final static Item CarbonitePickaxe = new CarbonitePickaxe(4504, carbonite);
+	public final static Item CarboniteShovel = new CarboniteShovel(4505, carbonite);
+	public final static Item CarboniteAxe = new CarboniteAxe(4506, carbonite);
 		
   // Other
-	public final static Item TarPileItem = new TarPileItem(5000);
-	public final static Item CarboniteIngot = new CarboniteIngot(5002);
+	public final static Item TarPileItem = new TarPileItem(4500);
+	public final static Item CarboniteIngot = new CarboniteIngot(4502);
 	
 	EventManager oreManager = new EventManager();
 	TreeManager treeManager = new TreeManager();
@@ -93,9 +95,13 @@ public class Craftra {
     			LanguageRegistry.addName(TarBlock, "Tar");
     			MinecraftForge.setBlockHarvestLevel(TarBlock, "shovel", 0);
     			
-    			GameRegistry.registerBlock(RedMapleLeafBLock, "RedMapleLeafBLock");
-    			LanguageRegistry.addName(RedMapleLeafBLock, "Red Maple Leaf");
-    			MinecraftForge.setBlockHarvestLevel(RedMapleLeafBLock, "axe", 0);
+    			GameRegistry.registerBlock(RedMapleLeafBlock, "RedMapleLeafBlock");
+    			LanguageRegistry.addName(RedMapleLeafBlock, "Red Maple Leaf");
+    			MinecraftForge.setBlockHarvestLevel(RedMapleLeafBlock, "axe", 0);
+    			
+    			GameRegistry.registerBlock(RedMapleWoodBlock, "RedMapleWoodBlock");
+    			LanguageRegistry.addName(RedMapleWoodBlock, "Red Maple Wood");
+    			MinecraftForge.setBlockHarvestLevel(RedMapleWoodBlock, "axe", 0);
     			
     		  // Item Lang
     			GameRegistry.registerItem(TarPileItem, "TarPileItem");
@@ -163,7 +169,7 @@ public class Craftra {
     					'x', carboniteingotStack,'y', stickStack);
     			
     			      // Smelting Recipes
-    			GameRegistry.addSmelting(501, carboniteingotStack, 0);
+    			GameRegistry.addSmelting(451, carboniteingotStack, 0);
     			
     			
              
