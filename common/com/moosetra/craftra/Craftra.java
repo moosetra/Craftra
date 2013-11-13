@@ -24,6 +24,7 @@ import com.moosetra.craftra.proxy.CommonProxy;
 import com.moosetra.craftra.item.CarbonitePickaxe;
 import com.moosetra.craftra.item.CarboniteAxe;
 import com.moosetra.craftra.item.CarboniteShovel;
+import com.moosetra.craftra.block.CarboniteBombBlock;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -51,6 +52,7 @@ public class Craftra {
 	public final static Block TarBlock = new TarBlock(452, Material.ground);
 	public final static Block RedMapleLeafBlock = new RedMapleLeafBlock(453, Material.leaves);
 	public final static Block RedMapleWoodBlock = new RedMapleWoodBlock(454, Material.wood);
+	public final static Block CarboniteBombBlock = new CarboniteBombBlock(455, Material.iron);
 	
   // Tools
 	public final static Item CarboniteLighter = new CarboniteLighter(5001);
@@ -102,6 +104,9 @@ public class Craftra {
     			GameRegistry.registerBlock(RedMapleWoodBlock, "RedMapleWoodBlock");
     			LanguageRegistry.addName(RedMapleWoodBlock, "Red Maple Wood");
     			MinecraftForge.setBlockHarvestLevel(RedMapleWoodBlock, "axe", 0);
+    			
+    			GameRegistry.registerBlock(CarboniteBombBlock, "CarboniteBombBlock");
+    			LanguageRegistry.addName(CarboniteBombBlock, "Carbonite Bomb");
     			
     		  // Item Lang
     			GameRegistry.registerItem(TarPileItem, "TarPileItem");

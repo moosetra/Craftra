@@ -15,6 +15,7 @@ public class WorldGenTree extends WorldGenerator
 /** The minimum height of a generated tree. */
 private final int minTreeHeight;
 /** True if this tree should grow Vines. */
+@SuppressWarnings("unused")
 private final boolean vinesGrow;
 /** The metadata value of the wood to use in tree generation. */
 private final int metaWood;
