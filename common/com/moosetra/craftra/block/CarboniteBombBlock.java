@@ -14,7 +14,7 @@ public class CarboniteBombBlock extends Block{
 
 	public CarboniteBombBlock(int ID, Material material) {
 		super(ID, material);
-		setCreativeTab(CreativeTabs.tabBlock);
+		setCreativeTab(CreativeTabs.tabRedstone);
 		setHardness(2.0F);
 		setStepSound(Block.soundMetalFootstep);
 		setUnlocalizedName("CarboniteBomb");
